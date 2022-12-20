@@ -14,3 +14,8 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+INSERT INTO tb_course (name,img_uri,img_gray_uri) 
+VALUES ('BootCamp HTML',
+'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
+'https://live.staticflickr.com/2891/11619047474_71850d7f16_b.jpg');
