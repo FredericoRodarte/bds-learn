@@ -22,4 +22,35 @@ VALUES ('BootCamp HTML',
 
 INSERT INTO TB_OFFER(edition,start_Moment,end_Moment,course_id) VALUES ('1.0',TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z',TIMESTAMP WITH TIME ZONE '2021-11-20T03:00:00Z',1);	
 
-INSERT INTO TB_OFFER(edition,start_Moment,end_Moment,course_id) VALUES ('2.0',TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z',TIMESTAMP WITH TIME ZONE '2021-12-20T03:00:00Z',1);	              
+INSERT INTO TB_OFFER(edition,start_Moment,end_Moment,course_id) VALUES ('2.0',TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z',TIMESTAMP WITH TIME ZONE '2021-12-20T03:00:00Z',1);
+
+
+INSERT INTO TB_NOTIFICATION(text,moment,read,route,USER_ID) VALUES ('TEXTO 1 USUARIO 1',TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z',FALSE,'ROTA 1 USUARIO 1',1);	
+INSERT INTO TB_NOTIFICATION(text,moment,read,route,USER_ID) VALUES ('TEXTO 2 USUARIO 1',TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z',FALSE,'ROTA 2 USUARIO 1',1);
+INSERT INTO TB_NOTIFICATION(text,moment,read,route,USER_ID) VALUES ('TEXTO 1 USUARIO 2',TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z',FALSE,'ROTA 1 USUARIO 2',2);	
+INSERT INTO TB_NOTIFICATION(text,moment,read,route,USER_ID) VALUES ('TEXTO 2 USUARIO 2',TIMESTAMP WITH TIME ZONE '2020-12-20T03:00:00Z',FALSE,'ROTA 2 USUARIO 2',2);
+
+
+INSERT INTO TB_RESOURCE (TITLE, DESCRIPTION, POSITION, IMG_URI, TYPE, OFFER_ID) VALUES (
+'TRILHA HTML',
+'TRILHA PRINCIPAL DO CURSO',
+1 ,
+'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
+1,
+1) ;       
+
+INSERT INTO TB_RESOURCE (TITLE, DESCRIPTION, POSITION, IMG_URI, TYPE, OFFER_ID) VALUES (
+'FORUM',
+'Tire suas dúvidas',
+2 ,
+'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
+2,
+1) ;  	             
+
+INSERT INTO TB_RESOURCE (TITLE, DESCRIPTION, POSITION, IMG_URI, TYPE, OFFER_ID) VALUES (
+'LIVES',
+'Lives exclusivas para a turma',
+3,
+'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
+0,
+1) ;   	              	              
