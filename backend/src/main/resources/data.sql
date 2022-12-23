@@ -53,4 +53,29 @@ INSERT INTO TB_RESOURCE (TITLE, DESCRIPTION, POSITION, IMG_URI, TYPE, OFFER_ID) 
 3,
 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
 0,
-1) ;   	              	              
+1) ;   
+
+
+INSERT INTO TB_SECTION (TITLE, DESCRIPTION, POSITION, IMG_URI, resource_id, prerequisite_id) VALUES (
+'CAPITULO 1',
+'NESTE CAPITULO VAMOS COMEÇAR',
+1,
+'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
+1,
+NULL);
+	              	
+INSERT INTO TB_SECTION (TITLE, DESCRIPTION, POSITION, IMG_URI, resource_id, prerequisite_id) VALUES (
+'CAPITULO 2',
+'NESTE CAPITULO VAMOS CONTINUAR',
+1,
+'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
+1,
+1);
+
+INSERT INTO TB_SECTION (TITLE, DESCRIPTION, POSITION, IMG_URI, resource_id, prerequisite_id) VALUES (
+'CAPITULO 3',
+'NESTE CAPITULO VAMOS F',
+1,
+'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
+1,
+2);              
