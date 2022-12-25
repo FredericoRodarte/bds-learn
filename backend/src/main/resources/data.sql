@@ -78,4 +78,21 @@ INSERT INTO TB_SECTION (TITLE, DESCRIPTION, POSITION, IMG_URI, resource_id, prer
 1,
 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Dom-Pedro-Old-Golf-Course-Vilamoura.jpg',
 1,
-2);              
+2);             
+
+
+insert into tb_enrollment (user_id,offer_id,enroll_Moment,refund_Moment,available,only_Update ) values (
+1,
+1,
+TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z',
+null,
+true,
+false);
+
+insert into tb_enrollment (user_id,offer_id,enroll_Moment,refund_Moment,available,only_Update ) values (
+2,
+1,
+TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z',
+null,
+TRUE,
+false);
