@@ -96,3 +96,23 @@ TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z',
 null,
 TRUE,
 false);
+
+insert into tb_lesson (title,position,section_id)values('Aula 1 do capitulo 1',1,1);
+insert into tb_content (id, text_content, video_URI ) values (1 , 'material de apoio: abc', 'https://youtu.be/vNS-54QlcEg');
+
+insert into tb_lesson (title,position,section_id)values('Aula 2 do capitulo 1',2,1);
+insert into tb_content (id, text_content, video_URI ) values (2 , '', 'https://youtu.be/vNS-54QlcEg');
+
+insert into tb_lesson (title,position,section_id)values('Aula 3 do capitulo 1',3,1);
+insert into tb_content (id, text_content, video_URI ) values (3 , '', 'https://youtu.be/vNS-54QlcEg');
+
+insert into tb_lesson (title,position,section_id)values('Tarefa do capitulo 1',4,1);
+
+insert into tb_task (id,description,question_Count,approval_Count,weight,due_Date) values 
+(4,'Fazer um trabalho legal',5,4,1.0,TIMESTAMP WITH TIME ZONE '2020-11-25T13:00:00Z');
+
+insert into tb_lessons_done (lesson_id, user_id, offer_id) values (1, 1, 1);
+insert into tb_lessons_done (lesson_id, user_id, offer_id) values (2, 1, 1);
+
+
+
