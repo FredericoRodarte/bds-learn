@@ -47,15 +47,18 @@ public class User implements Serializable{
     private List<Topic> deliveries = new ArrayList<>();
 	
 	public User() {		
-	}
+	}	
 
-	public User(Long id, String name, String email, String password, Set<Role> roles) {
+	public User(Long id, String name, String email, String password, Set<Role> roles, List<Notification> notifications,
+			List<Topic> deliveries) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
 		this.roles = roles;
+		this.notifications = notifications;
+		this.deliveries = deliveries;
 	}
 
 	public Long getId() {
@@ -94,10 +97,6 @@ public class User implements Serializable{
 		return roles;
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
-	}
-
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -109,6 +108,10 @@ public class User implements Serializable{
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
+	}	
+	
+	public List<Topic> getDeliveries() {
+		return deliveries;
 	}
 
 	@Override

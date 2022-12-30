@@ -41,12 +41,15 @@ public class Offer implements Serializable{
 	//@JsonIgnore
 	@OneToMany(mappedBy="offer")	
 	private List<Resource> resources = new ArrayList<>();	
+
+	@OneToMany(mappedBy="offer")	
+	private List<Topic> topics = new ArrayList<>();	
 	
 	public Offer() {		
-	}
+	}	
 
 	public Offer(Long id, String edition, Instant startMoment, Instant endMoment, Course course,
-			List<Resource> resources) {
+			List<Resource> resources, List<Topic> topics) {
 		super();
 		this.id = id;
 		this.edition = edition;
@@ -54,6 +57,7 @@ public class Offer implements Serializable{
 		this.endMoment = endMoment;
 		this.course = course;
 		this.resources = resources;
+		this.topics = topics;
 	}
 
 	public Long getId() {
@@ -111,6 +115,14 @@ public class Offer implements Serializable{
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
+	}	
+	
+	public List<Topic> getTopics() {
+		return topics;
+	}
+
+	public void setTopics(List<Topic> topics) {
+		this.topics = topics;
 	}
 
 	@Override

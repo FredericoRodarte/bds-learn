@@ -52,7 +52,7 @@ public class Topic implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name="offer_id")
-	private Offer Offer;
+	private Offer offer;
 	
     @OneToMany(mappedBy="topic")
     private List<Reply> replies = new ArrayList<>();
@@ -74,7 +74,7 @@ public class Topic implements Serializable{
 		this.body = body;
 		this.moment = moment;
 		this.author = author;
-		Offer = offer;
+		this.offer = offer;
 		this.lesson = lesson;
 	}
 
@@ -119,11 +119,11 @@ public class Topic implements Serializable{
 	}
 
 	public Offer getOffer() {
-		return Offer;
+		return offer;
 	}
 
 	public void setOffer(Offer offer) {
-		Offer = offer;
+		offer = offer;
 	}
 
 	public Lesson getLesson() {

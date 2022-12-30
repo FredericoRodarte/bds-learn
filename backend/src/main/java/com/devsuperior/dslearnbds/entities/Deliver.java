@@ -41,13 +41,13 @@ public class Deliver implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name="lesson_id")
-	private Lesson        lessonsDone  ;
+	private Lesson        lesson  ;
 	
 	public Deliver() {		
 	}
 
 	public Deliver(Long id, String uri, Instant moment, DeliverStatus status, String feedBack, Integer correctCount,
-			Enrollment enrollment, Lesson lessonsDone) {
+			Enrollment enrollment, Lesson lesson) {
 		super();
 		this.id = id;
 		this.uri = uri;
@@ -56,7 +56,7 @@ public class Deliver implements Serializable{
 		this.feedBack = feedBack;
 		this.correctCount = correctCount;
 		this.enrollment = enrollment;
-		this.lessonsDone = lessonsDone;
+		this.lesson = lesson;
 	}
 
 	public Long getId() {
@@ -116,11 +116,11 @@ public class Deliver implements Serializable{
 	}
 
 	public Lesson getLessonsDone() {
-		return lessonsDone;
+		return lesson;
 	}
 
-	public void setLessonsDone(Lesson lessonsDone) {
-		this.lessonsDone = lessonsDone;
+	public void setLessonsDone(Lesson lesson) {
+		this.lesson = lesson;
 	}
 
 	@Override
