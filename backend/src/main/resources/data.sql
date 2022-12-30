@@ -114,5 +114,25 @@ insert into tb_task (id,description,question_Count,approval_Count,weight,due_Dat
 insert into tb_lessons_done (lesson_id, user_id, offer_id) values (1, 1, 1);
 insert into tb_lessons_done (lesson_id, user_id, offer_id) values (2, 1, 1);
 
+insert into tb_deliver (
+correct_count, feed_back,moment,status, uri, offer_id,user_id, lesson_id) values
+(5,'Retorno 1',TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z',1,'https://youtu.be/vNS-54QlcEg',1,1,1);
 
+insert into tb_deliver (
+correct_count, feed_back,moment,status, uri, offer_id,user_id, lesson_id) values
+(5,'Retorno 1',TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z',1,'https://youtu.be/vNS-54QlcEg',1,2,2);
 
+insert into tb_topic (title, body, moment, author_id, offer_id, lesson_id) values ('Título do tópico 1','Corpo do tópico 1',TIMESTAMP WITH TIME ZONE '2020-12-12T13:00:00Z',1,1,1);
+insert into tb_topic (title, body, moment, author_id, offer_id, lesson_id) values ('Título do tópico 2','Corpo do tópico 2',TIMESTAMP WITH TIME ZONE '2020-12-13T13:00:00Z',2,1,1);
+insert into tb_topic (title, body, moment, author_id, offer_id, lesson_id) values ('Título do tópico 3','Corpo do tópico 3',TIMESTAMP WITH TIME ZONE '2020-12-14T13:00:00Z',2,1,1);
+insert into tb_topic (title, body, moment, author_id, offer_id, lesson_id) values ('Título do tópico 4','Corpo do tópico 4',TIMESTAMP WITH TIME ZONE '2020-12-15T13:00:00Z',1,1,2);
+insert into tb_topic (title, body, moment, author_id, offer_id, lesson_id) values ('Título do tópico 5','Corpo do tópico 5',TIMESTAMP WITH TIME ZONE '2020-12-16T13:00:00Z',1,1,2);
+insert into tb_topic (title, body, moment, author_id, offer_id, lesson_id) values ('Título do tópico 6','Corpo do tópico 6',TIMESTAMP WITH TIME ZONE '2020-12-17T13:00:00Z',2,1,3);
+
+insert into tb_reply (body, moment, topic_id, author_id) values ( 'Tente reiniciar o omputador',TIMESTAMP WITH TIME ZONE '2020-12-15T13:00:00Z',1,2);
+insert into tb_reply (body, moment, topic_id, author_id) values ( 'Deu certo, valeu!'          ,TIMESTAMP WITH TIME ZONE '2020-12-20T13:00:00Z',1,1);
+
+insert into tb_reply_likes(reply_id,user_id)values(1,1);
+
+insert into tb_topic_likes(topic_id,user_id) values (1,2);
+insert into tb_topic_likes(topic_id,user_id) values (2,1);
