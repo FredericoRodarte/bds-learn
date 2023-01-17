@@ -158,4 +158,14 @@ public class User implements UserDetails,Serializable{
 	public boolean isEnabled() {
 		return true;
 	}	
+	
+	public boolean hasHole(String holeName) {
+		
+		for (Role role : roles) {
+			if (role.getAuthority().equals(holeName)) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
